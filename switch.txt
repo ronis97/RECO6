@@ -1,0 +1,22 @@
+enable
+configure terminal
+hostname Pico
+banner motd # Uso exclusivo para estudiantes de RECO – Lab6 #
+line console 0
+logging synchronous
+password Reco_C
+login
+exit
+line vty 0 15
+logging synchronous
+password Reco_T
+login
+exit
+no ip domain-lookup
+interface fa0/4
+description a
+enable secret Reco_E
+exit
+show running-config
+copy running-config startup-config
+Destination filename [startup-config]? [enter]

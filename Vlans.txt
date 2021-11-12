@@ -1,0 +1,25 @@
+vlan 30 
+name Hombres
+exit
+interface fa0/1
+switchport mode access 
+switchport access vlan 30
+exit
+vlan 40 
+name Mujeres
+interface fa0/2
+switchport mode access 
+switchport access vlan 40
+exit
+interface gi0/1
+switchport mode trunk
+exit
+interface fa0/1
+switchport mode trunk
+exit
+interface gi0/2
+switchport mode trunk
+exit
+interface fa0/2
+switchport mode trunk
+exit

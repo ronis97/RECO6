@@ -23,3 +23,5 @@ exit
 interface fa0/2
 switchport mode trunk
 exit
+show running-config
+copy running-config startup-config
